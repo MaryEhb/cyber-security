@@ -8,6 +8,16 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <!--loading-->
+    <div class="load-overlay">
+        <div class="loading">
+            <div class="load load1"></div>
+            <div class="load load2"></div>
+            <div class="load load3"></div>
+        </div>
+    </div>
+
     <!--Background-->
     <div class="bg"></div>
     <div class="overlay"></div>
@@ -182,6 +192,16 @@
     </footer>
     <script src="js/wow.min.js"></script>
     <script>
+        //loading
+        const loading = document.querySelector(".load-overlay");
+        loading.style.display = "block";
+        window.addEventListener('load',function(){
+            loading.style.opacity = "0";
+            setTimeout(function(){
+                loading.style.display = "none";
+            },2000);
+        });
+
         //arrow on landing page
         const arrowButton = document.querySelector(".arrow");
         const firstSection = document.querySelector("section:first-of-type");
