@@ -405,3 +405,17 @@ footer img:hover{
         height:25px;
     }
 }
+
+
+@media (max-width:400px){
+	.top .flex-row{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.top .logo{
+		width: auto;
+		margin-bottom: 1rem;
+		
+	}	
+}
