@@ -1,0 +1,70 @@
+$mainColor: rgb(240, 240, 240);
+$primaryColor: rgb(172, 172, 172);
+
+/*Main Rulez*/
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    color: $mainColor;
+    font-family:sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+p{
+    color: $primaryColor;
+}    
+
+h2{
+    margin: 1rem;
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.774);
+    width:100%;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+section{
+    padding: 4rem  0;
+    &:first-of-type{
+        padding-top: 2rem;
+    }
+
+    p{
+        padding-bottom: 1rem;
+        text-align: justify;
+    }
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.capital{
+    text-transform: capitalize;
+}
+
+.flex-row{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

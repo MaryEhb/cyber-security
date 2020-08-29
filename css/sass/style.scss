@@ -1,0 +1,332 @@
+
+@import "mainRules";
+
+/*background*/
+.bg{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assests/images/bg.jpg');
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    z-index: -10;
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c0;
+    z-index: -9;
+}
+
+/*navigation*/
+.top{
+    .container{
+        padding-top: 1rem;
+    }    
+}
+
+.logo{
+    font-size: 31px;
+    width: 20px;
+    line-height: .8;
+    font-weight: 900;
+}
+
+
+/*nav bullets*/
+.nav-bullets{
+	position:fixed;
+	right:0;
+	top:50%;
+	margin-right:5px;
+    transform:translatey(-50%);
+	z-index:1000;
+	color:#000;
+    font-weight:bold;
+    font-size: 10px;
+
+    .bullets{
+        width:20px;
+        height:20px;
+        border-radius:50%;
+        border:3px solid $mainColor;
+        margin:10px auto;
+        position:relative;
+        cursor:pointer;
+        &:hover{
+            background-color:$mainColor;
+        }
+        &:hover .tooltip {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .tooltip {
+            position: absolute;
+            left: -150px;
+            top:-3px;
+            background-color: $mainColor;
+            padding: 1px 5px;
+            font-size: 12px;
+            border-radius: 3px;
+            width: 134px;
+            height:24px;
+            display: none;
+            cursor:default;
+
+            &::before{
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px;
+                position: absolute;
+                top: 50%;
+                border-color: transparent transparent transparent $mainColor;
+                right: -20px;
+                transform: translateY(-50%);
+            }
+            
+        }
+    }
+}
+
+
+/*landing section*/
+.landing{
+    width:100vw;
+    height: 100vh;
+    position: relative;
+
+    .welcome-text{
+        margin-top: 10rem;
+        border-left: 2px solid #00ad09;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        width:75%;
+        padding:1rem;
+        transition: all ease-in-out 1s;
+
+        h1{
+            padding-bottom: .75rem;
+        }
+    }
+
+    .arrow{
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img{
+            width:30px;
+            cursor: pointer;
+            animation: arrow 1.25s ease-in-out infinite;
+        }
+    }
+}
+
+.who{
+    img{
+    width:80px;
+    } 
+
+    .youtube{
+        width:100%;
+        cursor: pointer;
+    }
+}
+
+.train{
+    table{
+        width: 100%;
+        font-size: 12pt;
+        text-align: left;
+        background-color: rgba(12, 12, 12, 0.767);
+        margin-top: 2rem;
+    } 
+
+    th{
+        background-color: #cccccc;
+        padding: .75rem;
+        color: rgb(36, 36, 36);
+    }
+
+    td{
+        background-color: rgb(19, 19, 19);
+        padding: .75rem;
+        color:rgb(172, 172, 172);
+    }
+}
+
+/*footer*/
+footer{
+    background-color: rgb(8, 8, 8);
+    padding: .5rem 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+    }
+
+    img{
+        height:30px;
+        padding: 0 .25rem;
+        transition: all ease-in-out .05s;
+        &:hover{
+            transform:scale(1.2);
+        }
+    }
+}
+
+/*Loading*/
+.load-overlay{
+    position: fixed;
+    z-index: 1000;
+    width:100vw;
+    height:100vh;
+    background-color: #020202;
+    transition: all ease-in-out 1.5s;
+    display: none;
+}
+
+.loading{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:300px;
+    height:300px;
+
+    .load{
+        position: absolute;
+        border:2px solid #f1f1f138;
+        border-radius: 50%;
+    }
+
+    .load1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 4px solid #fff;
+        border-left: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+        animation: spin linear 2s infinite;
+    }
+
+    .load2{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        border-top: 4px solid #fff;
+        border-right: 4px solid #fff;
+        animation: spin linear 2s reverse infinite;
+    }
+
+    .load3{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        right: 40px;
+        bottom: 40px;
+        border-bottom: 4px solid #fff;
+        border-left: 4px solid #fff;
+        animation: spin linear 2s infinite;
+    }
+}
+
+/*loading animation*/
+@keyframes spin{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+/*animations*/
+@keyframes arrow{
+    0%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(1rem);
+        -webkit-transform: translateY(1rem);
+        -moz-transform: translateY(1rem);
+        -ms-transform: translateY(1rem);
+        -o-transform: translateY(1rem);
+    }
+    100%{
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+/*code for responsive*/
+@media (max-width:600px){
+    .landing h1{
+        font-size: 2.2rem;
+    }
+    
+    main, p{
+        font-size: 1rem;
+    }
+
+    section{
+        padding: 2rem 0;
+    }
+
+    .train table{
+        font-size: 10pt;
+    }
+
+    footer{
+        font-size: .7rem;
+    }
+
+    footer img{
+        height: 25px;
+    }
+}
+
+@media (max-width:400px){
+	.top .flex-row{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.top .logo{
+		width: auto;
+		margin-bottom: 1rem;
+		
+	}
+		
+}
+	
