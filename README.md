@@ -14,7 +14,7 @@ This is a one page website that share informations about an organization that ma
 * Sass files included
 * Responsive Design
 
-## Used-Plugins
+## Used Plugins
 * [WOW.js](https://wowjs.uk/)
 * [animate.css](https://animate.style/)
 
